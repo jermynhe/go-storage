@@ -154,3 +154,17 @@ func WithSize(v int64) (p Pair) {
 func WithWorkDir(v string) (p Pair) {
 	return Pair{Key: "work_dir", Value: v}
 }
+
+// WithCacheControl will apply cache_control value to Options.
+//
+// CacheControl specify the cache control for this request
+func WithCacheControl(v string) (p Pair) {
+	return Pair{Key: "cache_control", Value: v}
+}
+
+// WithContentEncoding will apply content_encoding value to Options.
+//
+// ContentEncoding specify the content encoding for this request
+func WithContentEncoding(v string) (p Pair) {
+	return Pair{Key: "content_encoding", Value: v}
+}
