@@ -68,3 +68,15 @@ work_dir will be default to / if not set.
 work_dir SHOULD be Unix style for object storage services.
 For fs storage service on windows platform, the behavior is defined separately.
 """
+
+[cache_control]
+type = "string"
+description = "specify the cache control for service or storage"
+
+[content_encoding]
+type = "string"
+description = "specify the content encoding for service or storage"
+
+[response_content_disposition]
+type = "string"
+description = "specify the response content disposition for service or storage"

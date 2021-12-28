@@ -9,6 +9,20 @@ import (
 	. "github.com/minhjh/go-storage/v4/types"
 )
 
+// WithCacheControl will apply cache_control value to Options.
+//
+// CacheControl specify the cache control for service or storage
+func WithCacheControl(v string) (p Pair) {
+	return Pair{Key: "cache_control", Value: v}
+}
+
+// WithContentEncoding will apply content_encoding value to Options.
+//
+// ContentEncoding specify the content encoding for service or storage
+func WithContentEncoding(v string) (p Pair) {
+	return Pair{Key: "content_encoding", Value: v}
+}
+
 // WithContentMd5 will apply content_md5 value to Options.
 //
 // ContentMd5
@@ -137,6 +151,13 @@ func WithOffset(v int64) (p Pair) {
 	return Pair{Key: "offset", Value: v}
 }
 
+// WithResponseContentDisposition will apply response_content_disposition value to Options.
+//
+// ResponseContentDisposition specify the response content disposition for service or storage
+func WithResponseContentDisposition(v string) (p Pair) {
+	return Pair{Key: "response_content_disposition", Value: v}
+}
+
 // WithSize will apply size value to Options.
 //
 // Size specify size for this request, storage will only read limited content data
@@ -153,18 +174,4 @@ func WithSize(v int64) (p Pair) {
 // For fs storage service on windows platform, the behavior is defined separately.
 func WithWorkDir(v string) (p Pair) {
 	return Pair{Key: "work_dir", Value: v}
-}
-
-// WithCacheControl will apply cache_control value to Options.
-//
-// CacheControl specify the cache control for this request
-func WithCacheControl(v string) (p Pair) {
-	return Pair{Key: "cache_control", Value: v}
-}
-
-// WithContentEncoding will apply content_encoding value to Options.
-//
-// ContentEncoding specify the content encoding for this request
-func WithContentEncoding(v string) (p Pair) {
-	return Pair{Key: "content_encoding", Value: v}
 }
